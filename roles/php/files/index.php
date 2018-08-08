@@ -6,7 +6,11 @@
 
 <?php
 echo "Hello World!";
-?> 
+?>
+ 
+<?php
+echo "TO check ansible-pull";
+?>
 
 </body>
 </html>
