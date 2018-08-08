@@ -1,0 +1,17 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: Ensure httpd server installed
+      yum:
+        name: httpd
+        state: present
+    - name: Ensure the httpd starts when the system restart
+      service:
+        name: httpd
+        state: started
+        enabled: true
+    - name: copy the required html file
+      copy: 
+       src: /home/vignesh/sample.html
+       dest: /var/www/html/sample.html

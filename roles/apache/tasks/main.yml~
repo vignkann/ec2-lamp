@@ -1,0 +1,11 @@
+---
+# tasks file for apache
+- name: Ensure httpd uninstall successfully
+  yum:
+    name: httpd
+    state: absent
+- name: Ensure httpd-tools uninstall successfully
+  yum: 
+    name: httpd-tools
+    state: absents
+ 
